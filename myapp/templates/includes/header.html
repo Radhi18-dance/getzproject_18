@@ -1,0 +1,39 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container-fluid"> <a class="navbar-brand fw-bold" href="/">Insurance</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="/dashboard">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/upload">Upload CSV</a></li>
+        <li class="nav-item"><a class="nav-link" href="/profile">Profile</a></li>
+        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="reportDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"> Report </a>
+          <ul class="dropdown-menu" aria-labelledby="reportDropdown">
+            <li><a class="dropdown-item" href="/policy_report">Policy-wise Report</a></li>
+            <li><a class="dropdown-item" href="/company_report">Company-wise Report</a></li>
+            <li><a class="dropdown-item" href="/branch_wise">Branch-wise Report</a></li>
+            <li><a class="dropdown-item" href="/new_client_report">New client Report</a></li>
+            <li><a class="dropdown-item" href="/product_lob_wise">Product-wise Report</a></li>
+            <li><a class="dropdown-item" href="/policy_history_report">Policy History Report-Client wise</a></li>
+            <li><a class="dropdown-item" href="/agent_wise_commission_report">Agent wise Commission Report </a></li>
+
+          </ul>
+        </li>
+      </ul>
+      <!-- Profile Dropdown -->
+      <div class="dropdown"> <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                        id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false"> <img src="{{ data.image.url|default:'https://i.pravatar.cc/100' }}" alt="profile"
+                            class="rounded-circle me-2" width="40" height="40"> <strong>{{ user_type|default:"User" }}</strong> </a>
+        <ul class="dropdown-menu dropdown-menu-end text-small shadow" aria-labelledby="profileDropdown">
+          <li><a class="dropdown-item" href="/profile">View Profile</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item" href="/logout">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
